@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Your Website</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        color: black;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        height: 5rem;
+        align-items: center;
+      }
+
+      nav {
+        /* background-color: #444;
+            padding: 10px; */
+            color: black;
+      }
+
+      nav a {
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        margin: 0 10px;
+      }
+
+      nav a:hover {
+        color: #F6AF03;
+      }
+
+      main {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+      }
+
+      footer {
+        background-color: #011d2a;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .footer-columns {
+        display: flex;
+      /* justify-content: space-around; */
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-section {
+        flex: 1;
+      text-align: left;
+    }
+
+      form {
+        /* max-width: 400px;
+        margin: 0 auto; */
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 2rem;
+      }
+
+      label {
+        /* display: block; */
+        margin-bottom: 8px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #011d2a;
+        color: white;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        height: 3rem;
+        width: 15rem;
+        border-radius: 5px;
+      }
+
+      .icons {
+        display: flex;
+        gap: 20px;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
+      }
+      .contact {
+        background-color: #011d2a;
+        padding: 20px;
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 300px;
+      }
+      .main-section {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .main-fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #ccc; /* Border at the bottom only */
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+      input[type="radio"] {
+        display: none; /* Hide the default radio button */
+      }
+
+      .custom-radio {
+        display: flex;
+        align-items: center;
+      }
+
+      .custom-radio input[type="radio"] + label {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .custom-radio input[type="radio"] + label::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        margin-right: 8px;
+        transition: background-color 0.3s;
+      }
+
+      .custom-radio input[type="radio"]:checked + label::before {
+        background-color: #011d2a; /* Change color when checked */
+      }
+      .custom-radio input[type="radio"] + label::after {
+        content: "\2713"; /* Unicode character for a checkmark */
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 14px;
+        line-height: 1;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .custom-radio input[type="radio"]:checked + label::after {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <h2><span style="color: #F6AF03;">Logo</span> Here</h2>
+      </div>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Feature</a>
+        <a href="#">Blog</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2 style="color: #F6AF03 ;">Contact Us</h2>
+      <p>Any question or remarks? Just write us a message!</p>
+
+      <div class="main-section">
+        <div class="contact">
+          <div>
+            <h2>Contact Information</h2>
+            <p>Say something to start a live chat</p>
+          </div>
+
+          <div>
+            <span class="icons">
+              <p>icon</p>
+              <p>1234567890</p>
+            </span>
+            <span class="icons">
+              <p>icon</p>
+              <p>1234567890</p>
+            </span>
+            <span class="icons">
+              <p>icon</p>
+              <p>1234567890</p>
+            </span>
+          </div>
+
+          <div class="social">
+            <i class="fab fa-facebook"></i> 
+            <i class="fa fa-instagram"></i>
+            <p>insta</p>
+          </div>
+        </div>
+        <form action="#" method="post">
+          <div class="main-fields">
+            <div>
+              <label for="name">First Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label for="email">Last Name</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="email">Phone Number</label>
+              <input type="tel" id="tel" name="tel" required />
+            </div>
+          </div>
+          <div>
+            <label>Select Subject?</label>
+            <div class="custom-radio">
+              <div>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="inquiry">General Inquiry</label>
+              </div>
+
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="inquiry">General Inquiry</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="inquiry">General Inquiry</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="inquiry">General Inquiry</label>
+            </div>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message" rows="4" required></input>
+          </div>
+          <div style="display: flex;align-self: flex-end;">
+
+              <input type="submit" value="Send Message" />
+            </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+        <h2><span style="color: #F6AF03;">Logo</span> Here</h2>
+
+        <hr/>
+        <div class="footer-columns">
+            <div class="footer-section">
+              <h3>Reach Us</h3>
+              <p>Your address here</p>
+              <p>Email: demo@gmail.com</p>
+              <p>Phone: 123-456-7890</p>
+            </div>
+            
+            <div class="footer-section">
+              <h3>Company</h3>
+              <p>About Us</p>
+              <p>Contact</p>
+              <p>Blogs</p>
+            </div>
+      
+            <div class="footer-section">
+              <h3>Legal</h3>
+              <p>Privacy Policy</p>
+              <p>Terms of Service</p>
+              <p>Terms of Use</p>
+              <p>Refund Policy</p>
+
+
+            </div>
+      
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <p>Techlabz Keybox</p>
+              <p>Downloads</p>
+              <p>Forum</p>
+            </div>
+      
+            <div class="footer-section">
+              <h3>Newsletter</h3>
+              <p>Subscribe to our newsletter for updates</p>
+              <!-- Add your newsletter form here if needed -->
+            </div>
+          </div>
+        </footer>
+    </footer>
+  </body>
+</html>
